@@ -29,6 +29,8 @@ Console.WriteLine("Result"+result.GetData("weather.day1.temp"));//print the valu
 * To access the nodes you need to use the ., for example: node1.node2
 */
 ```
+## What I used
+I used [RestSharp](https://restsharp.dev/) for  an efficient api call and [Json.NET](https://www.newtonsoft.com/json) to deserialize the json
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
