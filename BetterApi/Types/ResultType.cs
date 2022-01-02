@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BetterApi
+namespace BetterApi.Types
 {
     /// <summary>
     /// Result type class
@@ -32,7 +32,7 @@ namespace BetterApi
         /// Return API result
         /// </summary>
         /// <returns>return API Result as string</returns>
-        public static string RawContent()
+        public string RawContent()
         {
             return Data.result ?? "something went wrong";
         }
@@ -56,7 +56,8 @@ namespace BetterApi
             if (model.Equals("json"))
             {
                 result = JSONDeserialization.GetJsonContent(whatToTake);
-            }else if (model.Equals("xml"))
+            }
+            else if (model.Equals("xml"))
             {
                 result = XMLDeserialization.GetXmlContent(whatToTake);
             }

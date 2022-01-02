@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using BetterApi.Types;
+using RestSharp;
 
 namespace BetterApi
 {

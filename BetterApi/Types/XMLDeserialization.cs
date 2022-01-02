@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System.Xml;
-using static BetterApi.ResultType;
-using static BetterApi.JSONDeserialization;
-namespace BetterApi
+using static BetterApi.Types.ResultType;
+using static BetterApi.Types.JSONDeserialization;
+
+namespace BetterApi.Types
 {
     internal class XMLDeserialization
     {
@@ -19,7 +20,7 @@ namespace BetterApi
         {
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(Data.result);
-            string json= JsonConvert.SerializeXmlNode(doc);
+            string json = JsonConvert.SerializeXmlNode(doc);
             Data.result = json;
             string res = GetJsonContent(name);
             return res;

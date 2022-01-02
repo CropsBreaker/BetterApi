@@ -1,4 +1,5 @@
 ﻿using BetterApi;
+using BetterApi.Types;
 
 GetRequest getRequest = new GetRequest();
 getRequest.Url("inventedurl.com/json?");//IMPORTANT: REMEMBER TO USE ? AT THE END OF THE URL
@@ -7,7 +8,7 @@ getRequest.AddParameter("city = london");
 
 ResultType result = getRequest.Execute();//execute the query
 result.DefineModel("json");//JSON or XML
-Console.WriteLine(ResultType.RawContent());//print the raw result
+Console.WriteLine(result.RawContent());//print the raw result
 Console.WriteLine("Result"+result.GetData("weather.day1.temp"));//to access at nodes, use the .
 /*c
  * FRIENDLY REMINDER

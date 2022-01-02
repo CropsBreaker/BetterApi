@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
-using static BetterApi.ResultType;
+using static BetterApi.Types.ResultType;
 
-namespace BetterApi
+namespace BetterApi.Types
 {
     internal class JSONDeserialization
     {

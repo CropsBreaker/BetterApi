@@ -4,7 +4,34 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Description>handy library for using API. It also have some cool feature</Description>
+    <Copyright>MIT License</Copyright>
+    <PackageProjectUrl>https://github.com/V4L304/BetterApi</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/V4L304/BetterApi</RepositoryUrl>
+    <PackageTags>api; restapi;</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Version>1.0.0</Version>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>.1.</PackageReleaseNotes>
+    <PackageId>CropsBreaker.BetterApi</PackageId>
+    <Authors>valef</Authors>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Company>nuget pack</Company>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
