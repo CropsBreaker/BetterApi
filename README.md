@@ -29,6 +29,7 @@ Console.WriteLine("Result"+result.GetData("weather.day1.temp"));//print the valu
 * To access the nodes you need to use the ., for example: node1.node2
 */
 ```
+More details in the [wiki](https://github.com/V4L304/BetterApi/wiki#documentation)
 ## What I used
 I used [RestSharp](https://restsharp.dev/) for  an efficient api call and [Json.NET](https://www.newtonsoft.com/json) to deserialize the json
 
