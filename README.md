@@ -5,10 +5,10 @@ Handy library for using API. It also have some cool feature
 
 ## Installation
 
-coming soon...
+You can download the package from [Nuget](https://www.nuget.org/packages/BetterApi/)
 
 ```bash
-coming soon...
+PM > Install-Package BetterApi -Version 1.0.0.5
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ getRequest.AddHeader("x-key", "API_KEY");//to AddHeader to add the header
 getRequest.AddParameter("city = london");//to AddParameterto add the parameter
 
 ResultType result = getRequest.Execute();//execute the query
-Console.WriteLine(ResultType.RawContent());//print the raw result
+Console.WriteLine(result.RawContent());  //print the raw result
 result.DefineModel("json");//defines the model with which to search for data. JSON or XML
 Console.WriteLine("Result"+result.GetData("weather.day1.temp"));//print the value.
 /*
