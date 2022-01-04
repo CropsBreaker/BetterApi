@@ -15,6 +15,7 @@ PM > Install-Package BetterApi -Version 1.0.0.5
 
 ```csharp
 using BetterApi;
+using BetterApi.Types;
 
 GetRequest getRequest = new GetRequest();//main class
 getRequest.Url("inventedurl.com/json?");//IMPORTANT: REMEMBER TO USE ? AT THE END OF THE URL
