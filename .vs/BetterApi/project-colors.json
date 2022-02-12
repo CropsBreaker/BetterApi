@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ed76df92-917e-45f2-af0b-09d721b5a24a": {
+      "ProjectGuid": "ed76df92-917e-45f2-af0b-09d721b5a24a",
+      "DisplayName": "BetterApi",
+      "ColorIndex": 0
+    },
+    "797c6c49-4d5b-4ff7-b44c-fa7714a9be90": {
+      "ProjectGuid": "797c6c49-4d5b-4ff7-b44c-fa7714a9be90",
+      "DisplayName": "TestProj_netframework4.7.2",
+      "ColorIndex": 1
+    },
+    "ba9ea706-cc3a-48a1-add3-8df762ae6705": {
+      "ProjectGuid": "ba9ea706-cc3a-48a1-add3-8df762ae6705",
+      "DisplayName": "TestProj_net6.0",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "File esterni",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Collections.Generic;
 
 namespace BetterApi.Types
 {
@@ -7,27 +8,18 @@ namespace BetterApi.Types
     /// </summary>
     public class ResultType
     {
-        private string model = "";
+
         /// <summary>
         /// Class used only as data storage
         /// </summary>
         internal class Data
         {
-            internal List<string> parameter = new List<string>();
-            internal List<Tuple<string, string>> headers = new List<Tuple<string, string>>();
+            internal IList<string> parameter = new List<string>();
+            internal IList<Tuple<string, string>> headers = new List<Tuple<string, string>>();
             internal static string? result;
+            internal static string? statusCode;
         }
-        /// <summary>
-        /// Usage: ResultType.DefineModel(...)
-        /// JSON or XML(not case sensitive)
-        /// <code>
-        /// DefineModel(json)
-        /// </code>
-        /// </summary>
-        public void DefineModel(string model)
-        {
-            this.model = model.ToLowerInvariant();
-        }
+
         /// <summary>
         /// Return API result
         /// </summary>
@@ -41,38 +33,34 @@ namespace BetterApi.Types
         /// Get data by given name
         /// </summary>
         /// <param name="whatToTake">Name to search. For nitified: name1.name2.name3 etc...</param>
+        /// <param name="model">Define model: JSON or XML(not case sensitive)</param>
         /// <code>
         /// GetData("pets.dog")
         /// </code>
         /// <returns>return corrispondent value by given name</returns>
         /// <exception cref="Exception"></exception>
-        public string GetData(string whatToTake)
+        public string GetData(string whatToTake, string model)
         {
-            if (CheckModel())
-            {
-                throw new Exception("Model not defined, remember to define the model with ResultType.DefineModel");
-            }
             string result;
-            if (model.Equals("json"))
+            if (model.ToLower().Equals("json"))
             {
                 result = JSONDeserialization.GetJsonContent(whatToTake);
             }
-            else if (model.Equals("xml"))
+            else if (model.ToLower().Equals("xml"))
             {
                 result = XMLDeserialization.GetXmlContent(whatToTake);
             }
             else
             {
-                throw new Exception("wrong model name");
+                throw new Exception("Wrong model name");
             }
 
             return result;
         }
-        /// <summary>
-        /// return if the model is set
-        /// </summary>
-        /// <returns></returns>
-        private bool CheckModel() => model.Length == 0;
 
+        public string GetStatusCode()
+        {
+            return Data.statusCode ?? "";
+        }
     }
 }

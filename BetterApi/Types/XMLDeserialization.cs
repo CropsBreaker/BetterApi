@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Xml;
-using static BetterApi.Types.ResultType;
 using static BetterApi.Types.JSONDeserialization;
+using static BetterApi.Types.ResultType;
 
 namespace BetterApi.Types
 {
@@ -11,6 +11,7 @@ namespace BetterApi.Types
          * yea, ok, I know.
          * But, this is the speedest way to search in a xml
          */
+
         /// <summary>
         /// get value by given name
         /// </summary>

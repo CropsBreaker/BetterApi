@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using static BetterApi.Types.ResultType;
 
 namespace BetterApi.Types
@@ -28,9 +30,9 @@ namespace BetterApi.Types
                             if (key.Value.ToString().Contains(':'))
                             {
                                 /*
-                                 * 
+                                 *
                                  * So it contains more results
-                                 * 
+                                 *
                                  */
                                 string value = Convert.ToString(key.Value);
                                 value = RightFormatJson(value);
@@ -48,6 +50,7 @@ namespace BetterApi.Types
             }
             return res;
         }
+
         private static string RightFormatJson(string json)
         {
             //check if is an array
@@ -57,6 +60,7 @@ namespace BetterApi.Types
             }
             return json;
         }
+
         private static T DeserializeJson<T>(string json)
         {
             return JsonConvert.DeserializeObject<T>(value: json);

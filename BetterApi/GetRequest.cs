@@ -1,13 +1,17 @@
 ﻿using BetterApi.Types;
 using RestSharp;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace BetterApi
 {
     public class GetRequest
     {
-        private readonly ResultType.Data resultType = new();
+        private readonly ResultType.Data resultType = new ResultType.Data();
+
         /// <summary>
-        /// add header to the GET request
+        /// add header to the request
         /// </summary>
         /// <param name="headerName">Header Name</param>
         /// <param name="headerVal">Header Value</param>
@@ -16,7 +20,7 @@ namespace BetterApi
             resultType.headers.Add(new Tuple<string, string>(headerName, headerVal));
         }
 
-        private string url; //local url
+        private string? url; //local url
 
         /// <summary>
         /// Sets the url
@@ -24,49 +28,77 @@ namespace BetterApi
         /// <param name="url">url</param>
         public void Url(string url)
         {
-            setUrl(url);
+            SetUrl(url);
         }
-        private void setUrl(string url)
+
+        private void SetUrl(string url)
         {
             this.url = url;
         }
+
         /// <summary>
         /// Add parameter to the query
         /// </summary>
         /// <param name="param"></param>
-        public void AddParameter(string param)
+        public void AddParameter(string param1, string param2)
+        {
+            param1=param1.Trim();
+            param2=param2.Trim();
+            resultType.parameter.Add($"{param1}={param2}");
+        }
+        /// <summary>
+        /// Add parameter as given
+        /// </summary>
+        /// <param name="param">Parameter</param>
+        public void AddParameterNoRules(string param)
         {
             resultType.parameter.Add(param);
         }
+
+
         /// <summary>
         /// Execute and return the query
         /// </summary>
         /// <returns>Return the result of the query</returns>
-        public ResultType Execute()
+        public async Task<ResultType> ExecuteAsync()
         {
-            ResultType result = new ResultType();
+            ResultType result = new ResultType();//this it to pass the instance of data.
+            if (url != null)
+            {
+                foreach (string paramether in resultType.parameter)
+                {
+                    char lastChar = url[^1];
+                    if (lastChar == '&' || lastChar == '?')
+                    {
+                        url += paramether;
+                    }
+                    else
+                    {
+                        url += '&' + paramether;
+                    }
+                }
+                url = url.Replace(" ", "");
 
-            foreach (string paramether in resultType.parameter)
-            {
-                char lastChar = url[^1];
-                if (lastChar == '&' || lastChar=='?')
+                var client = new HttpClient();
+                var request = new HttpRequestMessage
                 {
-                    url += paramether;
-                }
-                else
+                    Method = HttpMethod.Get,
+                    RequestUri = new Uri(url),
+                };
+                foreach (var head in resultType.headers)
                 {
-                    url += '&' + paramether;
+                    request.Headers.Add(head.Item1, head.Item2);
                 }
+                string resp = "";
+                using (var response = await client.SendAsync(request))
+                {
+                    response.EnsureSuccessStatusCode();
+                    resp = await response.Content.ReadAsStringAsync();
+                    ResultType.Data.statusCode = response.StatusCode.ToString();
+                }
+                
+                ResultType.Data.result = resp;
             }
-            url = url.Replace(" ", "");
-            var client = new RestClient(url);
-            var request = new RestRequest(Method.GET);
-            foreach(var head in resultType.headers)
-            {
-                request.AddHeader(head.Item1, head.Item2);
-            }
-            IRestResponse response = client.Execute(request);
-            ResultType.Data.result = response.Content;
             return result;
         }
     }

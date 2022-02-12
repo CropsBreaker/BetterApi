@@ -1,0 +1,10 @@
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.1\BetterApi.csproj.AssemblyReference.cache
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.1\BetterApi.GeneratedMSBuildEditorConfig.editorconfig
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.1\BetterApi.AssemblyInfoInputs.cache
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.1\BetterApi.AssemblyInfo.cs
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.1\BetterApi.csproj.CoreCompileInputs.cache
+E:\FAKE DESKTOP\BetterApi\BetterApi\bin\Debug\netstandard2.1\BetterApi.deps.json
+E:\FAKE DESKTOP\BetterApi\BetterApi\bin\Debug\netstandard2.1\BetterApi.dll
+E:\FAKE DESKTOP\BetterApi\BetterApi\bin\Debug\netstandard2.1\BetterApi.pdb
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.1\BetterApi.dll
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.1\BetterApi.pdb

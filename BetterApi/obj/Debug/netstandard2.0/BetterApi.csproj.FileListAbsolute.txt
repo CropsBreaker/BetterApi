@@ -1,0 +1,5 @@
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.0\BetterApi.csproj.AssemblyReference.cache
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.0\BetterApi.GeneratedMSBuildEditorConfig.editorconfig
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.0\BetterApi.AssemblyInfoInputs.cache
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.0\BetterApi.AssemblyInfo.cs
+E:\FAKE DESKTOP\BetterApi\BetterApi\obj\Debug\netstandard2.0\BetterApi.csproj.CoreCompileInputs.cache
