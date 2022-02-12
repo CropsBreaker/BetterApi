@@ -10,9 +10,12 @@
     <RepositoryUrl>https://github.com/CropsBreaker/BetterApi</RepositoryUrl>
     <PackageTags>api, api deserializer, fastapi</PackageTags>
     <PackageReleaseNotes>Changed target framework to .netstandard2.1 + code improvement</PackageReleaseNotes>
-    <AssemblyVersion>1.0.0.6</AssemblyVersion>
-    <FileVersion>1.0.0.6</FileVersion>
+    <AssemblyVersion>1.0.0.8</AssemblyVersion>
+    <FileVersion>1.0.0.8</FileVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2" />
+    </dependencies>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,7 +31,6 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="RestSharp" Version="107.3.0" />
   </ItemGroup>
 
 </Project>
