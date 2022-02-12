@@ -13,11 +13,13 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("BetterApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Handy library for using API. It also have some cool feature")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.6")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("BetterApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BetterApi")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.6")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/CropsBreaker/BetterApi")]
 
 // Generato dalla classe WriteCodeFragment di MSBuild.
 

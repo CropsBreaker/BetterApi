@@ -8,7 +8,7 @@ Handy library for using API. It also have some cool feature
 You can download the package from [Nuget](https://www.nuget.org/packages/BetterApi/)
 
 ```bash
-PM > Install-Package BetterApi -Version 1.0.0.5
+PM > Install-Package BetterApi -Version 1.0.0.6
 ```
 
 ## Usage
