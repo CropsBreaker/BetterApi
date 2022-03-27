@@ -1,5 +1,5 @@
 # Better Api
-![Logo](https://github.com/V4L304/BetterApi/blob/master/logo.png)
+![Logo](https://github.com/CropsBreaker/BetterApi/blob/1cb20b4a5e6125cac7d79229a9dac3844ab8ada4/BetterApi/logo.png)
 
 Handy library for using API. It also have some cool feature
 
