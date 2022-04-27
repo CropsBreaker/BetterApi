@@ -38,8 +38,9 @@ More details in the [wiki](https://github.com/V4L304/BetterApi/wiki#documentatio
 ## What I used
 I used [Json.NET](https://www.newtonsoft.com/json) to deserialize the json
 
-## About the name
-In italian, api also means "bees"
+## About the logo
+In italian, "api" also means "bees"
+better -> butter 
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
